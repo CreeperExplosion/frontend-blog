@@ -6,16 +6,16 @@ import { Container } from 'react-bootstrap'
 
 
  const Styles = styled.div`
- *{
-     margin-top: 11em;
- }
+ {
+     margin-top: 5em;
+     font-size: 20px;
+}
  
  `
 
-export default function Layout(props) {
+export default function Page(props) {
     return (
         <Styles>
-
         <Container>
             {props.children}
         </Container>

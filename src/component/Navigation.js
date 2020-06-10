@@ -17,16 +17,16 @@ const Styles = styled.div`
 export default function Navigation() {
     return (
         <Styles>
-            <Navbar className='shadow' expand='md'  bg="dark" variant="dark" fixed="top">
-                    <div className='container p-3'>
-                        <Link className="brand">
+            <Navbar className='shadow' expand='sm'  bg="primary" variant="dark" fixed="top">
+                    <div className='container'>
+                        <Link className="brand" to="/">
                             <Navbar.Brand>
-                                Algebra's <b>BLOG</b>
+                                A<span className='text-weight-light text-lowercase'>lgebra's</span> <b>BLOG</b>
                             </Navbar.Brand>
                         </Link>
-                        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                        <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
                         <Navbar.Collapse id='responsive-navbar-nav'>
-                            <Nav className='m-3 '>
+                            <Nav className='ml-3 mt-sm-1 '>
                                 <Nav.Item>
                                     <Link to='/' className="nav-link">
                                         Home
@@ -44,7 +44,6 @@ export default function Navigation() {
                                 </Nav.Item>
 
                             </Nav>
-
                         </Navbar.Collapse>
                     </div>
             </Navbar>

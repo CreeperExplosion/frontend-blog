@@ -1,21 +1,29 @@
 import React from 'react';
 
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
+import styled from 'styled-components'
 
 import Home from './Home'
 import About from './About'
 import Contact from './Contact'
 import NotFound from './NotFound'
-import Layout from './component/Layout';
+import Page from './component/Page';
 import Navigation from './component/Navigation';
+import Foot from './component/Foot';
+
+
+
+const Style = styled.div`
+
+`;
 
 function App() {
   return (
-    <React.Fragment>
+    <Style>
 
       <Router>
       <Navigation/>
-      <Layout>
+      <Page>
 
         <Switch>
             <Route exact path="/" component={Home}/>
@@ -23,11 +31,14 @@ function App() {
             <Route exact path="/contact" component={Contact}/>
             <Route component={NotFound}/>
         </Switch>
-      </Layout>
+      </Page>
 
+
+      <Foot/>
       </Router>
       
-    </React.Fragment>
+      
+    </Style>
   );
 }
 
