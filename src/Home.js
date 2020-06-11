@@ -22,9 +22,9 @@ export default function Home() {
                 <JumboHead title="Ghibran's Blog" subtitle='where awesomeness fills the hole' />
 
                 <LinkBar links={[
-                    {text:"Featured Posts", action:()=>{console.log("hello")} },
-                    {text:"Most Beloved",  action: ()=>{console.log("hello")} },
-                    {text:"Most Discussed", action: ()=>{console.log("hello")} }
+                    {text:"Most Recent", action:(e) => {console.log(e)} },
+                    {text:"Most Beloved",  action: (e) => {console.log(e)} },
+                    {text:"Most Discussed", action: (e) => {console.log(e)} }
                 ]} />
 
             Excepteur commodo est Lorem ut exercitation elit ex.

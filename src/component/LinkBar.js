@@ -21,10 +21,10 @@ export default function LinkBar(props) {
     return (
         <Styles>
             <Container className='bg-dark text-light rounded mb-4'>
-                {props.links.map((content , index) =>{
+                {props.links.map((link , i) =>{
                     return (
-                        <Link className='m-3 text-light' onClick={content.action} tp={content.redirect}>
-                             {content.text}
+                        <Link className='m-3 text-light' onClick={(event) => link.action(event)} to='#' key={i}>
+                             {link.text}
                         </Link>
                     )
                 })}

@@ -1,28 +1,33 @@
 import React from 'react'
 import styled from 'styled-components'
+import JumboHead from './component/JumboHead'
+import LinkBar from './component/LinkBar'
 
 
 const Styles = styled.div`
-    *{
-        // text-align: justify;
-        // text-justify: inter-word;
+    {
+        text-align:center;
     }
 `
 
-export default function Contact() {
+export default function Contact(props) {
     return (
         <Styles>
-            <div>
-
-            Hello
-
-
-            Qui eu id aute ut reprehenderit sint eiusmod id irure. Duis ipsum quis exercitation pariatur commodo incididunt consequat. Veniam enim mollit tempor cupidatat consectetur aute cillum laboris voluptate reprehenderit proident aliqua minim occaecat. Irure proident occaecat proident dolor aliquip. Eiusmod culpa nisi qui mollit duis culpa.
-
-            Voluptate ullamco ad et commodo Lorem duis ea qui nulla elit enim veniam quis. Ad irure veniam pariatur ullamco duis pariatur duis minim commodo laborum nulla velit. Ex commodo fugiat excepteur veniam duis reprehenderit sunt.
-
-            Ex consequat id cupidatat enim nulla culpa deserunt reprehenderit. Irure consectetur esse ut ea. Nisi do amet nisi ipsum magna laborum voluptate adipisicing nulla aliquip id laboris proident amet.
+            <div className='mb-4'>
+                < JumboHead title='Wanna contact me?' subtitle='look at my Github first !' />
+                Veniam est non sit incididunt labore do veniam nulla eiusmod exercitation officia nulla eu nisi. Eu eiusmod quis
+                excepteur adipisicing ut proident nulla. Voluptate dolor commodo eu sint mollit in. Minim voluptate Lorem sint ad
+                dolor cupidatat officia commodo do aute enim aliqua ea
+                cillum. Et est ut pariatur nostrud id anim nulla officia sunt nulla fugiat consectetur ea.
             </div>
+
+            <LinkBar links={[{ text: "My Github Page", action: () => { window.location.href = "https://github.com/CreeperExplosion" } }]} />
+            <hr />
+
+
+            <h4> Wanna Email me ?</h4>
+            <p>avicenaaljabbar@ghibran.xyz</p>
+
         </Styles>
     )
 }

@@ -4,22 +4,30 @@ import { Link } from 'react-router-dom'
 import { Nav, Navbar } from 'react-bootstrap'
 import styled from 'styled-components'
 
+import Logo from '../resource/logo-white.png'
 
 const Styles = styled.div`
 
 .brand {
     text-decoration:none;
+    margin:0;
+}
+
+img{
+    max-width:3em;
+    
+    margin-top: -5px;
+    margin-right: 1.5em;
 }
 
 `
-
-
 export default function Navigation() {
     return (
         <Styles>
             <Navbar className='shadow' expand='sm'  bg="primary" variant="dark" fixed="top">
                     <div className='container'>
                         <Link className="brand" to="/">
+                        <img src={Logo} alt='Fx'/>
                             <Navbar.Brand>
                                 A<span className='text-weight-light text-lowercase'>lgebra's</span> <b>BLOG</b>
                             </Navbar.Brand>
